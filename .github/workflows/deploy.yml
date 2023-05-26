@@ -14,5 +14,4 @@ jobs:
         run: echo 'Deploy com Sucesso'
      
       - name: Criando uma tag
-      - run: |
-          gilsonmaran/landing-page: v${{github.run_number}} -m "Release version ${{github.run_number}}"
+      - run: git tag -a v${{github.run_number}} -m "Release version ${{github.run_number}}"
