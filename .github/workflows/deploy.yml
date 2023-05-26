@@ -12,3 +12,7 @@ jobs:
     steps:
       - name: Deploy Success
         run: echo 'Deploy com Sucesso'
+        
+      - name: Copy index.html
+        run: php -r "file_exists('index.html') || copy('index.html', 'index2.html');"
+
