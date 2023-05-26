@@ -12,3 +12,6 @@ jobs:
     steps:
       - name: Deploy Success
         run: echo 'Deploy com Sucesso'
+     
+      - name: Criando uma tag
+        run: git tag -a v1.0.0 -m "Release version ${{github.run_number}}" 
